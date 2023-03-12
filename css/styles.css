@@ -1,0 +1,101 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Styles for the header */
+header {
+    background-color: #F4A7B9;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid black;
+}
+
+/* Styles for the main section */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem;
+    border: 1px solid black;
+}
+
+/* Styles for the game board section */
+.game-board {
+    width: 100%;
+    height: 150px;
+    background-color: #C9B1E6;
+    border: 1px solid black;
+    margin-bottom: 2rem;
+}
+
+/* Styles for the input box section */
+.input-box {
+    width: 100%;
+    height: 50px;
+    background-color: #FFCBA4;
+    border: 1px solid black;
+    margin-bottom: 2rem;
+}
+
+/* Styles for the score section */
+.score {
+    width: 30%;
+    height: 150px;
+    background-color: #F0E8D0;
+    border: 1px solid black;
+    margin-bottom: 2rem;
+}
+
+/* Styles for the correct word section */
+.correct-word {
+    width: 40%;
+    height: 150px;
+    background-color: #AED6F1;
+    border: 1px solid black;
+    margin-bottom: 2rem;
+}
+
+/* Styles for the timer section */
+.timer {
+    width: 30%;
+    height: 150px;
+    background-color: #F4D03F;
+    border: 1px solid black;
+    margin-bottom: 2rem;
+}
+
+/* Styles for the player list section */
+.player-list {
+    width: 30%;
+    height: calc(50vh - 332px);
+    background-color: #C8E6C9;
+    border: 1px solid black;
+    margin-bottom: 2rem;
+}
+
+/* Styles for the chat box section */
+.chat-box {
+    width: 70%;
+    height: calc(50vh - 332px);
+    background-color: #F1948A;
+    border: 1px solid black;
+    margin-bottom: 2rem;
+}
+
+/* Styles for the footer */
+footer {
+    background-color: #F0B27A;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid black;
+}
