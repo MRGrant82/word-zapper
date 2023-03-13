@@ -1,3 +1,34 @@
+// Create the board size switch
+const boardSizeSwitch = document.createElement('div');
+boardSizeSwitch.classList.add('board-size-toggle');
+const smallBoardSpan = document.createElement('span');
+smallBoardSpan.innerText = '5x5';
+const largeBoardSpan = document.createElement('span');
+largeBoardSpan.innerText = '7x7';
+const boardSizeSlider = document.createElement('input');
+boardSizeSlider.type = 'range';
+boardSizeSlider.min = '5';
+boardSizeSlider.max = '7';
+boardSizeSlider.value = '5';
+boardSizeSlider.classList.add('board-size-slider');
+const switchLabel = document.createElement('label');
+switchLabel.classList.add('switch');
+const slider = document.createElement('span');
+slider.classList.add('slider', 'round');
+const toggle = document.createElement('input');
+toggle.type = 'checkbox';
+toggle.id = 'board-size-toggle';
+toggle.addEventListener('click', () => {
+  boardSize = toggle.checked ? 7 : 5;
+  generateGameBoard();
+});
+switchLabel.appendChild(toggle);
+switchLabel.appendChild(slider);
+boardSizeSwitch.appendChild(smallBoardSpan);
+boardSizeSwitch.appendChild(switchLabel);
+boardSizeSwitch.appendChild(largeBoardSpan);
+document.querySelector('header').appendChild(boardSizeSwitch);
+
 function generateGameBoard() {
   let boardSize = 5;
   const gameBoard = document.querySelector('.game-board');
@@ -30,41 +61,6 @@ function generateGameBoard() {
     cell.innerText = letter;
     gameBoard.appendChild(cell);
   }
-
-  // Add the board size switch
-  const boardSizeSwitch = document.createElement('div');
-  boardSizeSwitch.classList.add('board-size-toggle');
-  const smallBoardSpan = document.createElement('span');
-  smallBoardSpan.innerText = '5x5';
-  const largeBoardSpan = document.createElement('span');
-  largeBoardSpan.innerText = '7x7';
-  const boardSizeSlider = document.createElement('input');
-  boardSizeSlider.type = 'range';
-  boardSizeSlider.min = '5';
-  boardSizeSlider.max = '7';
-  boardSizeSlider.value = '5';
-  boardSizeSlider.classList.add('board-size-slider');
-  boardSizeSlider.addEventListener('input', (event) => {
-    boardSize = event.target.value;
-    generateGameBoard();
-  });
-  const switchLabel = document.createElement('label');
-  switchLabel.classList.add('switch');
-  const slider = document.createElement('span');
-  slider.classList.add('slider', 'round');
-  const toggle = document.createElement('input');
-  toggle.type = 'checkbox';
-  toggle.id = 'board-size-toggle';
-  toggle.addEventListener('click', () => {
-    boardSize = toggle.checked ? 7 : 5;
-    generateGameBoard();
-  });
-  switchLabel.appendChild(toggle);
-  switchLabel.appendChild(slider);
-  boardSizeSwitch.appendChild(smallBoardSpan);
-  boardSizeSwitch.appendChild(switchLabel);
-  boardSizeSwitch.appendChild(largeBoardSpan);
-  document.querySelector('header').appendChild(boardSizeSwitch);
 }
 
 window.onload = function() {
