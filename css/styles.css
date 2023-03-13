@@ -55,7 +55,6 @@ main {
 
 
 /* Styles for the score and timer container section */
-/* Styles for the score and timer container section */
 .score-timer-container {
   display: flex;
   justify-content: space-between;
@@ -74,7 +73,7 @@ main {
   border: 1px solid black;
   text-align: center;
   padding-top: 5px;
-  flex-grow: 1;
+  flex-grow: 10;
 }
 
 /* Styles for the timer section */
@@ -86,41 +85,41 @@ main {
 
 .timer {
   background-color: #F4D03F;
-  width: calc(33.33% - 1px); /* subtracting 1px to account for border */
+  flex-grow: 2;
 }
 
 .score {
   background-color: #F0E8D0;
-  width: calc(33.33% - 1px); /* subtracting 1px to account for border */
+  flex-grow: 6.15;
 }
 
 
 
 /* Styles for the player list and chat box container section */
 .player-chat-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: row;
   width: 100%;
   height: calc((100vh - 100px) * 0.67 - 332px);
-  justify-items: stretch;
+  justify-content: space-between;
+  align-items: stretch;
   grid-row: 3 / 4;
   grid-column: 2 / 3;
 }
 
-/* Styles for the player list section */
 .player-list,
 .chat-box {
-  width: 100%;
   height: 100%;
   border: 1px solid black;
   margin-bottom: 2rem;
+  flex-basis: 50%;
 }
 
 .player-list {
   background-color: #C8E6C9;
+  flex-basis: 50%;
 }
 
-/* Styles for the chat box section */
 .chat-box {
   background-color: #F1948A;
 }
