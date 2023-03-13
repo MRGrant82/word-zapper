@@ -163,7 +163,7 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  flex-grow: 5;
+  flex-grow: 2;
 }
 
 input[type="text"] {
@@ -186,12 +186,13 @@ input[type="text"] {
 
 .timer {
   background-color: #F4D03F;
-  flex-grow: 4;
+  flex-grow: 1;
+  
 }
 
 .score {
   background-color: #F0E8D0;
-  flex-grow: 5;
+  flex-grow: 4.175;
 }
 
 .graphic {
