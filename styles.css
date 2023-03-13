@@ -159,8 +159,11 @@ main {
   background-color: #FFCBA4;
   border: 1px solid black;
   text-align: center;
-  padding-top: 5px;
-  flex-grow: 8.9;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  flex-grow: 5;
 }
 
 input[type="text"] {
@@ -173,20 +176,35 @@ input[type="text"] {
 }
 
 /* Styles for the timer section */
+/* Styles for the timer section */
 .timer,
 .score {
   border: 1px solid black;
-  flex-grow: 1;
+  display: flex;
+  align-items: center;
 }
 
 .timer {
   background-color: #F4D03F;
-  flex-grow: 2;
+  flex-grow: 4;
 }
 
 .score {
   background-color: #F0E8D0;
-  flex-grow: 6.15;
+  flex-grow: 5;
+}
+
+.graphic {
+  height: 100%;
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FADBD8;
+  font-size: 1.2rem;
+  border: 1px solid black;
+  flex-grow: 1;
+  margin-left: auto;
 }
 
 
