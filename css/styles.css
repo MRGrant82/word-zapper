@@ -1,157 +1,133 @@
 /* General styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-  }
-  
-  /* Styles for the header */
-  header {
-    background-color: #F4A7B9;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    border: 1px solid black;
-  }
-  
-  /* Styles for the main section */
-  main {
-    display: grid;
-    grid-template-columns: 50vw 50vw;
-    grid-template-rows: 50vh calc(50vh - 1rem) repeat(2, auto);
-    grid-gap: 0;
-    padding: 0;
-    border: 1px solid black;
-  }
-  
-  /* Styles for the game board section */
-  .game-board {
-    width: 100%;
-    height: 50vh;
-    background-color: #C9B1E6;
-    border: 1px solid black;
-    position: relative;
-    top: 0;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .correct-word {
-    width: 100%;
-    height: 50vh;
-    background-color: #AED6F1;
-    border: 1px solid black;
-    margin-bottom: 1rem;
-    grid-row-start: 3;
-    grid-row-end: 3;
-    grid-column-start: 1;
-    grid-column-end: 1;
-  }
+body {
+  font-family: Arial, sans-serif;
+}
 
-  .score-timer-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: calc(50vh / 6);
-    background-color: #F9E79F;
-    border: 1px solid black;
-    margin-bottom: 0.5rem; /* decrease the margin-bottom value */
-    grid-row-start: 2;
-    grid-row-end: 3;
-    grid-column-start: 1;
-    grid-column-end: ;
-   
-  }
-  
-  .score-timer-container h2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: auto;
-    padding: 0;
-  }
-  
-  
-  /* Styles for the input box section */
-  .input-box {
-    width: 50%;
-    height: 100%;
-    background-color: #FFCBA4;
-    border: 1px solid black;
-    text-align: center;
-    padding-top: 5px;
-    
-  }
-  
-  /* Styles for the timer section */
-  .timer {
-    width: 25%;
-    height: 100%;
-    background-color: #F4D03F;
-    border: 1px solid black;
-  }
-  
-  /* Styles for the score section */
-  .score {
-    width: 25%;
-    height: 100%;
-    background-color: #F0E8D0;
-    border: 1px solid black;
-  }
+/* Styles for the header */
+header {
+  background-color: #F4A7B9;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid black;
+}
 
-  .player-chat-container {
-    width: 100%;
-    height: calc((100vh - 100px) * 0.67 - 332px);
-    display: flex;
-    justify-content: space-between;
-    margin-top: 0; 
-    grid-row-start: 3;
-    grid-row-end: 3;
-    grid-column-start: 2;
-    grid-column-end: 2;
-  }
-  
-   /* Styles for the player list section */
-   .player-list {
-    width: 50%;
-    height: 100%;
-    background-color: #C8E6C9;
-    border: 1px solid black;
-    margin-bottom: 2rem;
-  }
+/* Styles for the main section */
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 50vh;
+  grid-gap: 0;
+  border: 1px solid black;
+}
 
-  /* Styles for the chat box section */
-  .chat-box {
-    width: 50%;
-    height: 100%;
-    background-color: #F1948A;
-    border: 1px solid black;
-    margin-bottom: 2rem;
-  }
-  
-  /* Styles for the footer */
-  .footer-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  
-  footer {
-    background-color: #F0B27A;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    border: 1px solid black;
-  }
-  
+/* Styles for the game board section */
+.game-board-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.game-board {
+  width: 100%;
+  height: 100%;
+  background-color: #C9B1E6;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.correct-word {
+  width: 1fr;
+  height: 100%;
+  background-color: #AED6F1;
+  border: 1px solid black;
+}
+
+
+/* Styles for the score and timer container section */
+/* Styles for the score and timer container section */
+.score-timer-container {
+  display: flex;
+  justify-content: space-between;
+  height: calc(50vh / 6);
+  background-color: #F9E79F;
+  border: 1px solid black;
+  margin-bottom: 0.5rem;
+  grid-row: 2 / 3;
+  grid-column: 1 / -1;
+}
+
+/* Styles for the input box section */
+.input-box {
+  height: 100%;
+  background-color: #FFCBA4;
+  border: 1px solid black;
+  text-align: center;
+  padding-top: 5px;
+  flex-grow: 1;
+}
+
+/* Styles for the timer section */
+.timer,
+.score {
+  border: 1px solid black;
+  flex-grow: 1;
+}
+
+.timer {
+  background-color: #F4D03F;
+  width: calc(33.33% - 1px); /* subtracting 1px to account for border */
+}
+
+.score {
+  background-color: #F0E8D0;
+  width: calc(33.33% - 1px); /* subtracting 1px to account for border */
+}
+
+
+
+/* Styles for the player list and chat box container section */
+.player-chat-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+  height: calc((100vh - 100px) * 0.67 - 332px);
+  justify-items: stretch;
+  grid-row: 3 / 4;
+  grid-column: 2 / 3;
+}
+
+/* Styles for the player list section */
+.player-list,
+.chat-box {
+  width: 100%;
+  height: 100%;
+  border: 1px solid black;
+  margin-bottom: 2rem;
+}
+
+.player-list {
+  background-color: #C8E6C9;
+}
+
+/* Styles for the chat box section */
+.chat-box {
+  background-color: #F1948A;
+}
+
+/* Styles for the footer */
+.footer-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
