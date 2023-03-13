@@ -49,6 +49,8 @@ main {
   align-items: stretch;
   justify-items: stretch;
   overflow: hidden;
+  justify-content: center;
+  align-content: center;
 }
 
 .game-board-cell {
