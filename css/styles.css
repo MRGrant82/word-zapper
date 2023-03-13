@@ -33,7 +33,8 @@ main {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 
 .game-board {
@@ -41,10 +42,26 @@ main {
   height: 100%;
   background-color: #C9B1E6;
   border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(auto, 1fr);
+  grid-template-rows: repeat(auto, 1fr);
+  grid-gap: 0;
+  align-items: stretch;
+  justify-items: stretch;
+  overflow: hidden;
+}
+
+.game-board-cell {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  background-color: #FADBD8;
+  border: 1px solid black;
 }
+
 
 .correct-word {
   width: 1fr;
@@ -129,4 +146,31 @@ main {
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+/* Responsive styles for smaller screens */
+@media only screen and (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+  
+  .correct-word {
+    order: 2;
+  }
+
+  .score-timer-container {
+    order: 3;
+  }
+
+  .player-chat-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .player-list,
+  .chat-box {
+    flex-basis: 100%;
+    margin-bottom: 1rem;
+  }
 }
