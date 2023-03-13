@@ -45,10 +45,9 @@
   /* Styles for the input box section */
   .input-box {
     width: 33.333%;
-    height: 50px;
+    height: 100%;
     background-color: #FFCBA4;
     border: 1px solid black;
-    margin-right: 1rem;
     text-align: center;
     padding-top: 10px;
   }
@@ -56,21 +55,38 @@
   /* Styles for the timer section */
   .timer {
     width: 33.333%;
-    height: 50px;
+    height: 100%;
     background-color: #F4D03F;
     border: 1px solid black;
-    margin-left: 1rem;
-    text-align: center;
-    padding-top: 10px;
   }
   
   /* Styles for the score section */
   .score {
     width: 33.333%;
-    height: 50px;
+    height: 100%;
     background-color: #F0E8D0;
     border: 1px solid black;
   }
+
+  .score-timer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+  }
+  
+  .score-timer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: #F9E79F;
+    border: 1px solid black;
+    margin-bottom: 1rem;
+  }
+
+  
   
   /* Styles for the correct word section */
   .correct-word {
