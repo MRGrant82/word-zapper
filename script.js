@@ -20,7 +20,7 @@ toggle.type = 'checkbox';
 toggle.id = 'board-size-toggle';
 toggle.addEventListener('click', () => {
   boardSize = toggle.checked ? 7 : 5;
-  generateGameBoard();
+  generateGameBoard(boardSize);
 });
 switchLabel.appendChild(toggle);
 switchLabel.appendChild(slider);
@@ -29,8 +29,7 @@ boardSizeSwitch.appendChild(switchLabel);
 boardSizeSwitch.appendChild(largeBoardSpan);
 document.querySelector('header').appendChild(boardSizeSwitch);
 
-function generateGameBoard() {
-  let boardSize = 5;
+function generateGameBoard(boardSize) {
   const gameBoard = document.querySelector('.game-board');
   const gameBoardWidth = gameBoard.offsetWidth;
   const gameBoardHeight = gameBoard.offsetHeight;
@@ -64,5 +63,5 @@ function generateGameBoard() {
 }
 
 window.onload = function() {
-  generateGameBoard();
+  generateGameBoard(5);
 }
