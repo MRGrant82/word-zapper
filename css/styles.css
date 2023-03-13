@@ -21,9 +21,9 @@
   /* Styles for the main section */
   main {
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: repeat(4, auto);
-    grid-gap: .25rem;
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: 50vh calc(50vh - 1rem) repeat(2, auto);
+    grid-gap: 0;
     padding: 0;
     border: 1px solid black;
   }
@@ -40,6 +40,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 3;
   }
 
   .correct-word {
@@ -48,6 +52,10 @@
     background-color: #AED6F1;
     border: 1px solid black;
     margin-bottom: 1rem;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 1;
   }
 
   .score-timer-container {
@@ -59,6 +67,11 @@
     background-color: #F9E79F;
     border: 1px solid black;
     margin-bottom: 0.5rem; /* decrease the margin-bottom value */
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: ;
+   
   }
   
   .score-timer-container h2 {
@@ -78,6 +91,7 @@
     border: 1px solid black;
     text-align: center;
     padding-top: 5px;
+    
   }
   
   /* Styles for the timer section */
@@ -102,7 +116,10 @@
     display: flex;
     justify-content: space-between;
     margin-top: 0; 
-    grid-row-start: 5;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 2;
   }
   
    /* Styles for the player list section */
