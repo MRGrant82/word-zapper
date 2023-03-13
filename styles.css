@@ -160,7 +160,7 @@ main {
   border: 1px solid black;
   text-align: center;
   padding-top: 5px;
-  flex-grow: 10;
+  flex-grow: 9.7;
 }
 
 /* Styles for the timer section */
