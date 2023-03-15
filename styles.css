@@ -13,31 +13,31 @@
   grid-column: span 2;
   grid-row: span 2;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(1, 1fr);
+  grid-template-rows: repeat(6, 1fr);
   align-items: center;
   background-color: blue;
-  border: 1px solid black;
-}
-
-.game-board {
-  grid-column: 1;
-  grid-row: 1;
-  display: grid;
-  align-content: center;
-  justify-items: center;
-  background-color: yellow;
-  /* grid-template-columns: repeat(5, 1fr); for a 5x5 board */
-  /* grid-template-rows: repeat(5, 1fr); for a 5x5 board */
-  /* gap: 10px;
-  padding: 10px; */
   border: 1px solid black;
   height: 100%;
 }
 
-
+.game-board {
+  grid-column: 1;
+  grid-row: span 5;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  background-color: yellow;
+  border: 1px solid black;
+  height: 100%;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  max-width: 100%;
+}
 
 .game-board-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 1fr;
 }
 
 .game-board-letter {
@@ -46,7 +46,6 @@
   align-items: center;
   width: 30px;
   height: 30px;
-  margin: 2px;
   border: 1px solid black;
   font-size: 20px;
   font-weight: bold;
@@ -56,21 +55,21 @@
 .input-box {
  
   grid-column: 1;
-  grid-row: 2;
+  grid-row: 6;
   display: grid;
   align-self: end;
   justify-items: center;
-  /* height: 100%; */
   border: 1px solid black;
+  height: 100%;
 }
 
 
 #input-word {
   width: 50%;
-  height: 150%;
+  height: 25%;
   text-align: center;
-  margin-top: -8%;
-  padding: 3%;
+  margin-top: -6%;
+  padding: 2.5%;
 }
 
 .score-correct-word-container {
