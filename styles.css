@@ -1,6 +1,6 @@
 .game-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   height: 100vh;
   width: 100%;
@@ -10,47 +10,72 @@
 
 .game-board-container {
   display: grid;
-  grid-row: 1 / span 2;
-  grid-column: 1;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-column: span 2;
+  grid-row: span 2;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   align-items: center;
-  background-color: #F8ECE0;
+  background-color: blue;
   border: 1px solid black;
 }
 
 .game-board {
-  display: grid;
-  grid-column: 1 / 4;
+  grid-column: 1;
   grid-row: 1;
-  align-items: center;
+  display: grid;
+  align-content: center;
   justify-items: center;
-  
+  background-color: yellow;
+  /* grid-template-columns: repeat(5, 1fr); for a 5x5 board */
+  /* grid-template-rows: repeat(5, 1fr); for a 5x5 board */
+  /* gap: 10px;
+  padding: 10px; */
   border: 1px solid black;
+  height: 100%;
+}
+
+
+
+.game-board-row {
+  display: flex;
+}
+
+.game-board-letter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  margin: 2px;
+  border: 1px solid black;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .input-box {
-  display: grid;
-  grid-column: 1 / 4;
+ 
+  grid-column: 1;
   grid-row: 2;
-  align-items: center;
-  justify-items: center;
+  display: grid;
   align-self: end;
+  justify-items: center;
+  /* height: 100%; */
   border: 1px solid black;
 }
 
+
 #input-word {
   width: 50%;
-  height: 200%;
-  position: relative;
-  top: -150%;
+  height: 150%;
   text-align: center;
-  
+  margin-top: -8%;
+  padding: 3%;
 }
 
 .score-correct-word-container {
   display: grid;
-  grid-column: 2;
+  grid-column:3;
   grid-row: 1 / span 2;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -77,7 +102,7 @@
 
 
 .player-chat-container {
-  grid-column: 1 / span 2;
+  grid-column: span 3;
   grid-row: 3;
   background-color: #E1E5F2;
   border: 1px solid black;
