@@ -9,24 +9,34 @@
 }
 
 .game-board-container {
+  display: grid;
   grid-row: 1 / span 2;
   grid-column: 1;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
   background-color: #F8ECE0;
   border: 1px solid black;
 }
 
 .game-board {
-  height: 75%;
   display: grid;
-  align-content: center;
+  grid-column: 1 / 4;
+  grid-row: 1;
+  align-items: center;
   justify-items: center;
+  
+  border: 1px solid black;
 }
 
 .input-box {
-  height: auto;
   display: grid;
-  align-content: center;
+  grid-column: 1 / 4;
+  grid-row: 2;
+  align-items: center;
   justify-items: center;
+  align-self: end;
+  border: 1px solid black;
 }
 
 .score-correct-word-container {
