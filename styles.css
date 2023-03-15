@@ -39,6 +39,15 @@
   border: 1px solid black;
 }
 
+#input-word {
+  width: 50%;
+  height: 200%;
+  position: relative;
+  top: -150%;
+  text-align: center;
+  
+}
+
 .score-correct-word-container {
   display: grid;
   grid-column: 2;
